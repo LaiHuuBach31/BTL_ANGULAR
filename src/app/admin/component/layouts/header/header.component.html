@@ -1,0 +1,29 @@
+
+<div (window:scroll)="onWindowScroll($event)" >
+  <div class="container-fluid"  >
+    <div class="row top" id="menu_scrol">
+      <div class="col-lg-2 liver">
+        <h3 class="text-center pt-2">LIVERPOOL FC</h3>
+      </div>
+      <div class="col-lg-10 search">
+        <div class="ip">
+          <input type="text" name="" id="" placeholder="Search projects....." width="100%">
+        </div>
+        <div class="row bell p-3">
+          <div>
+            <i class="fa-solid fa-envelope-open mr-3"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-bell mr-3"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-gear mr-3"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-right-from-bracket" (click)="logout()"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

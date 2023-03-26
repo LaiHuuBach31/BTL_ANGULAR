@@ -1,0 +1,72 @@
+<h3 class="text-danger mt-5 text-center">Add My New Product</h3>
+<div class="container mt-5">
+    <div class="col-lg-8 form">
+        <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Title</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="title">
+                <div *ngIf="f.title.invalid && (f.title.dirty || f.title.touched)" class="text-danger">
+                    <div *ngIf="f.title.errors?.['required']">
+                        <small>This is a required field.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Price</label>
+                <input type="number" class="form-control" id="exampleInputPassword1" formControlName="price">
+                <div *ngIf="f.price.invalid && (f.price.dirty || f.price.touched)"  class="text-danger">
+                    <div *ngIf="f.price.errors?.['required']">
+                        <small>This is a required field.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Image1</label>
+                <input type="file" class="form-control mb-2" id="exampleInputEmail1" (change)="changeImage1($event)" >
+                <img src="{{image1}}" alt="" width="50px">
+                <div *ngIf="f.image1.errors">
+                    <small class="text-danger">This is a required field.</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Image2</label>
+                <input type="file" class="form-control mb-2" id="exampleInputEmail1" (change)="changeImage2($event)" >
+                <img src="{{image2}}" alt="" width="50px">
+                <div *ngIf="f.image2.errors">
+                    <small class="text-danger">This is a required field.</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Forshop_id</label>
+                <div class="form-group">
+                    <select class="form-control" name="" id="" formControlName="forshop_id">
+                        <option value="" *ngFor="let item of cateforshop" value="{{item.id}}">{{item.name}}</option>
+                    </select>
+                </div>
+                
+                <!-- <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="forshop_id">
+                <div *ngIf="f.forshop_id.invalid && (f.forshop_id.dirty || f.forshop_id.touched)" class="text-danger">
+                    <div *ngIf="f.forshop_id.errors?.['required']">
+                        <small>This is a required field.</small>
+                    </div>
+                </div> -->
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Player_id</label>
+                <div class="form-group">
+                    <select class="form-control" name="" id="" formControlName="player_id">
+                        <option value="" *ngFor="let item of cateplayer" value="{{item.id}}" >{{item.name}}</option>
+                    </select>
+                </div>
+                
+                <!-- <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  formControlName="player_id">
+                <div *ngIf="f.player_id.invalid && (f.player_id.dirty || f.player_id.touched)" class="text-danger">
+                    <div *ngIf="f.player_id.errors?.['required']">
+                        <small>This is a required field.</small>
+                    </div>
+                </div> -->
+            </div>
+            <button type="submit" class="btn btn-success mt-3 mb-5" [disabled]="!formData.valid">Add New </button>
+        </form>
+    </div>
+</div>

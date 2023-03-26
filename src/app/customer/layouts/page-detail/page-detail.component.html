@@ -1,0 +1,305 @@
+<body>
+    <header (window:scroll)="onWindowScroll($event)">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1 col-md-2 top_left">
+                    <div class="logo">
+                        <img src="https://www.liverpoolfc.com/liverpoolfc_crest.png" alt="" class="card-img show_img">
+                    </div>
+                </div>
+                <div class="col-lg-11 col-md-10 top_right">
+                    <nav class="navbar navbar-expand-sm navbar-light  menu_top">
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavId">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link li_top liver " href="#">LIVERPOOLFC.COM</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link li_top livers" href="#">STORE</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <img src="https://www.sc.com/en/content/themes/standardchartered/assets/src/images/standard-chartered.svg"
+                            alt="" class="logo_02">
+                        <a href="login.html"><i class="far fa-user mr-3 ml-5 icon"></i></a>
+                    </nav>
+                    <p class="text  mb-0 p-1">Official Liverpool FC Store</p>
+                    <nav class="navbar navbar-expand-sm navbar-light menu_fixed tablet_ " >
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavId">
+                            <!-- <h3 class="text-center liver" id="lfc">LFC</h3> -->
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu_then">
+                                <li class="nav-item pt-2 pr-3 pl-3">
+                                    <a class="nav-link liver" href="#">Nike</a>
+                                </li>
+                                <li class="nav-item pt-2 pr-3 pl-3">
+                                    <a class="nav-link liver" href="#">Matchday Ready</a>
+                                </li>
+                                <li class="nav-item pt-2 pr-3 pl-3">
+                                    <a class="nav-link liver" href="#">Pashion</a>
+                                </li>
+                                <li class="nav-item pt-2 pr-3 pl-3">
+                                    <a class="nav-link liver" href="#">Living</a>
+                                </li>
+                                <li class="nav-item pt-2 pr-3 pl-3">
+                                    <a class="nav-link liver" href="#">Souvenis</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="search">
+                            <div class="search_icon">
+                                <i class="fas fa-search icon mr-3" (click)="onClick('search_scroll')"></i>
+                            </div>
+                            <div class="form_control" id="show_search">
+                                <form action="" class="form">
+                                    <input type="text" placeholder="Search here . . . . ." >
+                                </form>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-xmark form_control"  id="delete" (click)="deleteSearch('delete_scroll')"></i>
+                            </div>
+                        </div>
+                        <a><i class="fas fa-shopping-bag icon ml-4 " routerLink="/cart"></i></a>
+                        <a href="" class="header-widget">
+
+                            <i class="fa-solid ">
+                                <p><small>{{length}}</small></p>
+                            </i>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="d-none" id="menu_scrol">
+            <nav class="navbar navbar-expand-sm navbar-light menu_fixed tablet_ haha" >
+                <h3 class="text-center liver" id="lfc">LFC</h3>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu_then">
+                        <li class="nav-item pt-2 pr-3 pl-3">
+                            <a class="nav-link liver" href="#">Nike</a>
+                        </li>
+                        <li class="nav-item pt-2 pr-3 pl-3">
+                            <a class="nav-link liver" href="#">Matchday Ready</a>
+                        </li>
+                        <li class="nav-item pt-2 pr-3 pl-3">
+                            <a class="nav-link liver" href="#">Pashion</a>
+                        </li>
+                        <li class="nav-item pt-2 pr-3 pl-3">
+                            <a class="nav-link liver" href="#">Living</a>
+                        </li>
+                        <li class="nav-item pt-2 pr-3 pl-3">
+                            <a class="nav-link liver" href="#">Souvenis</a>
+                        </li>
+                    </ul>
+                    <div class="search">
+                        <div class="search_icon">
+                            <i class="fas fa-search icon mr-3" (click)="onClick('search_scroll1')"></i>
+                        </div>
+                        <div class="form_control" id="show_search1">
+                            <form action="" class="form">
+                                <input type="text" placeholder="Search here . . . . .">
+                            </form>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-xmark form_control " id="delete1" (click)="deleteSearch('delete_scroll1')"></i>
+                        </div>
+                    </div>
+                <a><i class="fas fa-shopping-bag icon ml-4" routerLink="/cart"></i></a>
+                <a href="" class="header-widget">
+
+                    <i class="fa-solid ">
+                        <p><small>{{length}}</small></p>
+                    </i>
+                </a>
+                </div>
+                
+            </nav>
+        </div>
+        
+        <!-- <div class="title ">
+            <span class="names">Name & Number printing from £5 > </span>
+            <span class="name">Shop 22/23 Now >></span>
+        </div> -->
+    </header>
+
+
+    <main class="mb-5 mt-5">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <owl-carousel-o [options]="customOptions">
+                        <ng-template carouselSlide>
+                            <div class="show" href="#">
+                                <img [src]="detail.image1" id="show-img" class="card-img">
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="show" href="#">
+                                <img src="https://store.liverpoolfc.com/media/catalog/product/cache/75834f51694404f8a86d1a825ae7de7e/w/e/web_size_dm1843r-3_copy.jpg" id="show-img" class="card-img">
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="show" href="#">
+                                <img src="https://store.liverpoolfc.com/media/catalog/product/cache/dd504f005c0b90ffe1b9fb2344db1a87/d/m/dm1843r-13_copy_1.jpg" id="show-img" class="card-img">
+                            </div>
+                        </ng-template> 
+                        <ng-template carouselSlide>
+                            <div class="show" href="#">
+                                <img src="https://store.liverpoolfc.com/media/catalog/product/cache/dd504f005c0b90ffe1b9fb2344db1a87/d/m/dm1843r-10_copy_1.jpg" id="show-img" class="card-img">
+                            </div>
+                        </ng-template> 
+                        <ng-template carouselSlide>
+                            <div class="show" href="#">
+                                <img src="https://store.liverpoolfc.com/media/catalog/product/cache/dd504f005c0b90ffe1b9fb2344db1a87/d/m/dm1843r-12_copy_1.jpg" id="show-img" class="card-img">
+                            </div>
+                        </ng-template>
+                      </owl-carousel-o>
+                      
+                    
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="top_ct text-center mb-0">LFC NAME & NUMBER £5</p>
+                            <p class="big mb-1">LFC Nike Mens Home Stadium Jersey 21/22</p>
+                            <h6 class="card-title stock mb-1">IN STOCK</h6>
+                            <p class="card-text piece mb-0">£84.95</p>
+                            <div class="card text-left same_img pl-0 pr-0">
+                                <div class="card-body pl-0">
+                                    <button class="btn  size_sp1">S</button>
+                                    <button class="btn size_sp1">M</button>
+                                    <button class="btn size_sp1">L</button>
+                                    <button class="btn size_sp1">XL</button>
+                                    <button class="btn size_sp1">XXL</button>
+                                </div>
+                            </div>
+                            <p class="choose">CHOOSE PERSONALIZATION GROUP</p>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-6">
+                                    <div class="card text-left cupp">
+                                        <img class="card-img-top"
+                                            src="https://store.liverpoolfc.com/media/personalisation/group/p/r/premier_league_7.jpg"
+                                            alt="">
+                                        <div class="card-body  p-0 text-center">
+                                            <h4 class="card-title football"><a href="" class="choose ">Premier
+                                                    League</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-6">
+                                    <div class="card text-left cupp">
+                                        <img class="card-img-top"
+                                            src="https://store.liverpoolfc.com/media/personalisation/group/u/e/uefa_champions_league_5.png"
+                                            alt="">
+                                        <div class="card-body  p-0 text-center">
+                                            <h4 class="card-title football"><a href="" class="choose ">UEFA Champions
+                                                    League </a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-6">
+                                    <div class="card text-left cupp">
+                                        <img class="card-img-top"
+                                            src="https://store.liverpoolfc.com/media/personalisation/group/w/s/wsl_patch-removebg-preview_3.png"
+                                            alt="">
+                                        <div class="card-body  p-0 text-center">
+                                            <h4 class="card-title football"><a href="" class="choose">Carabao Cup
+                                                    Winners</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-6">
+                                    <div class="card text-left cupp">
+                                        <img class="card-img-top"
+                                            src="https://store.liverpoolfc.com/media/personalisation/group/l/f/lfcw_22_champions_16.png"
+                                            alt="">
+                                        <div class="card-body  p-0 text-center">
+                                            <h4 class="card-title football"><a href="" class="choose ">FA Women's
+                                                    Championship</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row buy mb-5 mt-5">
+                                <div class="input ml-3">
+                                    <button class="btn-fake left_ip text-center" (click)="mark('-')">-</button>
+                                    <input type="munber" value="1" id="quantily" style="text-align: center;">
+                                    <button class="btn-fake right_ip text-center" (click)="mark('+')">+</button>
+                                </div>
+                                <div id="rateYo" class="star ml-5"></div>
+                            </div>
+
+                            <p class="top_ct text-center mb-0 p-3 add" (click)="addCart()"><a >Buy Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <footer class="">
+        <div class="financial">
+            <img src="https://store.liverpoolfc.com/media/uploads/LFCPartners_SCB-min.png" width="10%" alt=""
+                class="mr-3 ml-3">
+            <img src="https://store.liverpoolfc.com/media/uploads/2ebb49144952e__NIKE_LOGO.png" alt=""
+                class="mr-3 ml-3">
+            <img src="https://store.liverpoolfc.com/media/wysiwyg/logo-axa.png" width="5%" alt="" class="mr-3 ml-3">
+            <img src="https://store.liverpoolfc.com/media/uploads/part_expedia_logo.png" alt="" class="mr-3 ml-3">
+        </div>
+        <p class="follow mb-6 mt-5">Follow Us</p>
+
+        <div class="container d-flex hah">
+            <div class="row">
+                <div class="inta mr-3 ml-3">
+                    <div class="icon_">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <p>Instagram</p>
+                </div>
+                <div class="inta mr-3 ml-3">
+                    <div class="icon_">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <p>Twitter</p>
+                </div>
+                <div class="inta mr-3 ml-3">
+                    <div class="icon_">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <p>Facebook</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="button bg-light mt-5">
+            <div class="ad">
+                <p class="text-center">We accept the following payment methods</p>
+                <img src="https://store.liverpoolfc.com/media/uploads/lfc-payment-methods.png" alt="" class="card-img">
+            </div>
+        </div>
+        <p class="text-center end ">© Liverpoolfc.com 2022. All Rights Reserved. VAT Registration No: 325 1957 56</p>
+    </footer>
+</body>
+

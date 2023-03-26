@@ -1,0 +1,274 @@
+/* .container{
+    max-width: 1390px !important;
+} */
+a{
+    text-decoration: none
+}
+.top{
+    background: red;
+    padding: 10px 0px 50px 0px;
+}
+.logo{
+    align-items: center;
+}
+.avatar img{
+    overflow: hidden;
+    border-radius: 50% !important;
+}
+.logo-left:hover .avata{
+    display: block;
+}
+.menu{
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    background: red !important;
+    padding: 5px 10px;
+}
+.menu-right{
+    color: #fff;
+    font-weight: 700;
+}
+.menu-right a{
+    color: #fff !important;
+}
+.login{
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.logins{
+    align-items: center;
+}
+.head{
+    background: rgba(214, 82, 82, 0.824);
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+.all{
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 600;
+}
+.all a{
+    color: #fff;
+    font-weight: 700;
+}
+.haha{
+    padding-left: -15px;
+    position: relative;
+}
+.blog{
+    background: red;
+    color: #fff;
+    height: 350px;
+}
+.blog:hover{
+    box-shadow: 0px 1px 0px 10px #b01c1c;
+    /* border: 10px solid rgb(177, 49, 49); */
+    background: #b01c1c;
+}
+.nunezs{
+    background: yellow;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+.heightt{
+    height: 348px;
+}
+.buymow{
+    position: absolute;
+    width: 60%;
+}
+.buymow a{
+    font-weight: 800px !important;
+}
+.buy a{
+    color: #fff;
+    padding: 10px 30px 10px 10px;
+    background: black;
+}
+.custom a{
+    color: black;
+    padding: 10px 17px 10px 10px;
+    background: #fff;
+}
+.fixtures{
+    background: black;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+.allfix{
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 600;
+}
+.allfix a{
+    color: #54585f;
+    font-weight: 700;
+}
+.liv{
+    border-bottom: 1px solid #898d94;
+    padding-bottom: 15px ;
+}
+.morede{
+    background: black;
+    padding: 20px;
+}
+.morede a{
+    font-weight: 700;
+    color: #fff;
+}
+.checkout{
+    background: #e0dada;
+    padding: 50px 0px;
+}
+.video{
+    position: relative;
+}
+.icom{
+    position: absolute;
+    color: #fff;
+    bottom: 50%;
+    font-size: 30px;
+}
+.attending{
+    background: #00634d;
+    color: #fff;
+    padding: 20px 50px;
+}
+.radiuss{
+    margin: 0 auto;
+}
+.radiuss img{
+    border-radius: 50%;
+}
+.concerts{
+    padding: 20px 50px 20px 20px;
+    background: black;
+    width: 40%;
+    margin-top: 104px;
+}
+.sp_left{
+    width: 30%;
+    color: #fff;
+}
+.sp_right{
+    width: 70%;
+}
+.pro{
+    position: relative;
+    display: flex;
+}
+.price{
+    background: #ffffff;
+    /* background: red; */
+    width: 70%;
+    position: absolute;
+    bottom: 0px;
+    left: 16px;
+}
+.didyou{
+    width: 70%;
+    margin: 0 auto;
+}
+.background{
+    background: yellow;
+    padding: 30px 0px;
+    /* margin-top: 20px; */
+}
+.attendings{
+    background: red;
+    color: #fff;
+}
+.paad{
+    padding: 30px;
+}
+.radiusss{
+    padding-top: 35px;
+}
+.center{
+    width: 50%;
+    margin: 0 auto;
+}
+.cup{
+    position: relative;
+}
+.hahaha{
+    position: absolute;
+    bottom: 0;
+}
+.taitro{
+    background: red;
+    padding: 50px 0px;
+}
+.menu-footer li{
+    display: inline-block;
+    padding: 5px 10px;
+}
+.menu-footer li a{
+    color: #ffffff;
+}
+.information{
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    border-bottom: 1px solid #fff;
+    align-items: center;
+    padding: 20px 0px;
+}
+.footer-right{
+    font-size: 30px;
+    margin-right: 30px;
+}
+.footer-right i{
+    margin-left: 10px;
+}
+.footer{
+    background: #911712;
+    color: #ffffff;
+}
+.end{
+    padding-bottom: 50px;
+}
+html{
+    position: relative;
+}
+.users{
+    display: none;
+}
+.loginCustomer{
+    display: flex;
+    align-items: center;
+}
+.loginCustomer:hover .logout{
+    display: block;
+}
+.avatar{
+    position: relative;
+}
+.logout{
+    display: none;
+    background: #ffffff ;
+    padding: 5px 10px;
+    position: absolute;
+    color: red;
+    cursor: pointer;
+    bottom: -35px;
+}
+.hand{
+    cursor: pointer;
+}
+/* .sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+} */
+.sticky {
+    position: fixed;
+    top: 0;
+    /* width: 73%; */
+    width: 85.5%;
+    z-index: 1;
+  }
+  

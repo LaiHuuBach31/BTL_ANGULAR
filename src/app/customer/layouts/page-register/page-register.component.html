@@ -1,0 +1,241 @@
+<body>
+    <header (window:scroll)="onWindowScroll($event)">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-1 col-md-2 top_left">
+                    <div class="logo">
+                        <img src="https://www.liverpoolfc.com/liverpoolfc_crest.png" alt="" class="card-img show_img">
+                    </div>
+                </div>
+                <div class="col-lg-11 col-md-10 top_right">
+                    <nav class="navbar navbar-expand-sm navbar-light  menu_top">
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavId">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link li_top liver " href="#">LIVERPOOLFC.COM</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link li_top livers" href="#">STORE</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <img src="https://www.sc.com/en/content/themes/standardchartered/assets/src/images/standard-chartered.svg"
+                            alt="" class="logo_02">
+                        <a href="login.html"><i class="far fa-user mr-3 ml-5 icon"></i></a>
+                    </nav>
+                    <p class="text  mb-0 p-1">Official Liverpool FC Store</p>
+                    <nav class="navbar navbar-expand-sm navbar-light menu_fixed tablet_ ">
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavId">
+                            <!-- <h3 class="text-center liver" id="lfc">LFC</h3> -->
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu_then">
+                                <li class="nav-item pt-2 pr-3 pl-3">
+                                    <a class="nav-link liver" href="#">Nike</a>
+                                </li>
+                                <li class="nav-item pt-2 pr-3 pl-3">
+                                    <a class="nav-link liver" href="#">Matchday Ready</a>
+                                </li>
+                                <li class="nav-item pt-2 pr-3 pl-3">
+                                    <a class="nav-link liver" href="#">Pashion</a>
+                                </li>
+                                <li class="nav-item pt-2 pr-3 pl-3">
+                                    <a class="nav-link liver" href="#">Living</a>
+                                </li>
+                                <li class="nav-item pt-2 pr-3 pl-3">
+                                    <a class="nav-link liver" href="#">Souvenis</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="search">
+                            <div class="search_icon">
+                                <i class="fas fa-search icon mr-3" (click)="onClick()"></i>
+                            </div>
+                            <div class="form_control" id="show_search">
+                                <form action="" class="form">
+                                    <input type="text" placeholder="Search here . . . . .">
+                                </form>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-xmark form_control" id="delete" (click)="deleteSearch()"></i>
+                            </div>
+                        </div>
+                        <a><i class="fas fa-shopping-bag icon ml-4 "></i></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="d-none" id="menu_scrol">
+            <nav class="navbar navbar-expand-sm navbar-light menu_fixed tablet_ haha">
+                <h3 class="text-center liver" id="lfc">LFC</h3>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu_then">
+                        <li class="nav-item pt-2 pr-3 pl-3">
+                            <a class="nav-link liver" href="#">Nike</a>
+                        </li>
+                        <li class="nav-item pt-2 pr-3 pl-3">
+                            <a class="nav-link liver" href="#">Matchday Ready</a>
+                        </li>
+                        <li class="nav-item pt-2 pr-3 pl-3">
+                            <a class="nav-link liver" href="#">Pashion</a>
+                        </li>
+                        <li class="nav-item pt-2 pr-3 pl-3">
+                            <a class="nav-link liver" href="#">Living</a>
+                        </li>
+                        <li class="nav-item pt-2 pr-3 pl-3">
+                            <a class="nav-link liver" href="#">Souvenis</a>
+                        </li>
+                    </ul>
+                    <!-- <div class="search">
+                        <div class="search_icon">
+                            <i class="fas fa-search icon mr-3" (click)="onClick()"></i>
+                        </div>
+                        <div class="form_control" id="show_search">
+                            <form action="" class="form">
+                                <input type="text" placeholder="Search here . . . . ." >
+                            </form>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-xmark form_control"  id="delete" (click)="deleteSearch()"></i>
+                        </div>
+                    </div> -->
+                    <i class="fas fa-search icon"></i>
+                    <a><i class="fas fa-shopping-bag icon ml-4"></i></a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <h1 class="text-center mt-5 mb-5">Create New Customer Account</h1>
+        <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="exampleInputEmail1">FirstName *</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    formControlName="firstName">
+                <div *ngIf="f.firstName.invalid && (f.firstName.dirty || f.firstName.touched)" class="text-danger">
+                    <div *ngIf="f.firstName.errors?.['required']">
+                        <small>This is a required field.</small>
+                    </div>
+                    <div *ngIf="f.firstName.errors?.['minlength']">
+                        <small>First Name format errors </small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">LastName *</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" formControlName="lastName">
+                <div *ngIf="f.lastName.invalid && (f.lastName.dirty || f.lastName.touched)" class="text-danger">
+                    <div *ngIf="f.lastName.errors?.['required']">
+                        <small>This is a required field.</small>
+                    </div>
+                    <div *ngIf="f.lastName.errors?.['minlength']">
+                        <small>Last Name format errors </small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">UserName *</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" formControlName="userName">
+                <div *ngIf="f.userName.invalid && (f.userName.dirty || f.userName.touched)" class="text-danger">
+                    <div *ngIf="f.userName.errors?.['required']">
+                        <small>This is a required field.</small>
+                    </div>
+                    <div *ngIf="f.userName.errors?.['minlength']">
+                        <small>UserName format errors </small>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email *</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    formControlName="email">
+                <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="text-danger">
+                    <div *ngIf="f.email.errors?.['required']">
+                        <small>This is a required field.</small>
+                    </div>
+                    <div *ngIf="f.email.errors?.['email']">
+                        <small> Email format errors </small>
+                    </div>
+                </div>    
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password *</label>
+                <div class="ip_pass">
+                    <input type="password" class="form-control" id="pass1" formControlName="password" (keyup)="onChange()">
+                    <i class="fa-solid fa-eye icon_pass aaa" id="hide_" (click)="showPass()"></i>
+                </div>
+                <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="text-danger">
+                    <div *ngIf="f.password.errors?.['required']">
+                        <small>This is a required field.</small>
+                    </div>
+                    <div *ngIf="f.password.errors?.['minlength']">
+                        <small> Password format errors </small>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-danger mb-5 mt-5 sub" [disabled]="!formData.valid">Sign Up</button>
+        </form>
+    </main>
+
+
+    <footer class="">
+        <div class="financial">
+            <img src="https://store.liverpoolfc.com/media/uploads/LFCPartners_SCB-min.png" width="10%" alt=""
+                class="mr-3 ml-3">
+            <img src="https://store.liverpoolfc.com/media/uploads/2ebb49144952e__NIKE_LOGO.png" alt=""
+                class="mr-3 ml-3">
+            <img src="https://store.liverpoolfc.com/media/wysiwyg/logo-axa.png" width="5%" alt="" class="mr-3 ml-3">
+            <img src="https://store.liverpoolfc.com/media/uploads/part_expedia_logo.png" alt="" class="mr-3 ml-3">
+        </div>
+        <p class="follow mb-6 mt-5">Follow Us</p>
+
+        <div class="container d-flex hah">
+            <div class="row">
+                <div class="inta mr-3 ml-3">
+                    <div class="icon_">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <p>Instagram</p>
+                </div>
+                <div class="inta mr-3 ml-3">
+                    <div class="icon_">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <p>Twitter</p>
+                </div>
+                <div class="inta mr-3 ml-3">
+                    <div class="icon_">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <p>Facebook</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="button bg-light mt-5">
+            <div class="ad">
+                <p class="text-center">We accept the following payment methods</p>
+                <img src="https://store.liverpoolfc.com/media/uploads/lfc-payment-methods.png" alt="" class="card-img">
+            </div>
+        </div>
+        <p class="text-center end ">© Liverpoolfc.com 2022. All Rights Reserved. VAT Registration No: 325 1957 56</p>
+    </footer>
+</body>

@@ -1,0 +1,747 @@
+
+<header (window:scroll)="onWindowScroll($event)">
+    <div class="top" >
+    <div class="container">
+        <div><div class="menu" id="sticky">
+            <div class="logo d-flex">
+                <div class="logo-left">
+                    <img src="https://www.liverpoolfc.com/liverpoolfc_crest.png" width="60px" alt="" class="">
+                    <!-- <img src="https://cdn.dynamicyield.com/api/8772718/images/2b469f1786f66__darwin.png" width="60px" alt=""> -->
+                </div>
+                <div class="logo-right">
+                    <!-- <p class="ml-2 text-light">130 YEARS</p> -->
+                </div>
+            </div>
+            <div class="menu-right">
+                <nav class="navbar navbar-expand-sm navbar-light">
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">NEWS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">VIDEO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">FIXTURES & TEAMS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">TICKETS & BOOKING</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" routerLink="product">SHOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">MORE</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="logins d-flex">
+                        <div class="login">
+                            <div class="loginCustomer">
+                                <div class="avatar">
+                                    <img *ngIf="user" src="https://i0.wp.com/bongdahangngay.com/wp-content/uploads/2022/07/hai-1.jpg?ssl=1" width="30px" class="ml-2" alt="">  
+                                </div>
+                                <p class="logout" id="logout1"   (click)="logOut()">Logout</p>
+                                
+                                <i class="fa-solid fa-user ml-2" id="ava"></i>
+                                <div>
+                                    <a class="hand" (click)="loginCustomer()"><span class="ml-3 mr-3">LOGIN</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>                
+                            <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2021-06/2021-22_SCB_White.svg" width="90px" alt="" class="ml-3">
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div></div>
+        
+        <div class="d-flex all mt-3">
+            <div >
+                <p class="head">HEADLINES</p>
+            </div>
+            <div class="allnew">
+                <a href="">ALL NEW<i class="fa-solid fa-angle-right ml-2"></i></a>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-lg-4 haha" *ngFor="let item of list">
+                <div class="card text-left blog mb-3">
+                <img class="card-img-top" src="{{item.img}}" alt="">
+                <div class="card-body">
+                    <p class="card-text">{{item.time}} hours ago</p>
+                    <h4 class="card-title">{{item.title}}</h4>
+                </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-4 haha">
+                <div class="card text-left blog">
+                <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-06/premier-league-fixtures-16062022.webp?itok=0eDVK8DA&width=1680" alt="">
+                <div class="card-body">
+                    <p class="card-text">1 day ago</p>
+                    <h4 class="card-title">Liverpool's 2022-23 Premier League fixture list revealed</h4>
+                </div>
+                </div>
+            </div> 
+            <div class="col-lg-4 haha">
+                <div class="card text-left blog">
+                <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-06/anfield-general-view-170622.webp?itok=RENqCgIR&width=1680" alt="">
+                <div class="card-body">
+                    <p class="card-text">3 hours ago</p>
+                    <h4 class="card-title">Liverpool v Strasbourg: Pre-season friendly ticket details</h4>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 haha">
+                <div class="card text-left blog">
+                <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-06/jay-spearing-liverpool-fc-170622.webp?itok=pRhur6Uf&width=1680" alt="">
+                <div class="card-body">
+                    <p class="card-text">3 hours ago</p>
+                    <h4 class="card-title">Jay Spearing makes return to Liverpool as U18s coach</h4>
+                </div>
+                </div>
+            </div>  
+            <div class="col-lg-4 haha">
+                <div class="card text-left blog">
+                <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-06/darwin-nunez-bts-150622.webp?itok=A8bFOcD-&width=1680" alt="">
+                <div class="card-body">
+                    <p class="card-text">1 day ago</p>
+                    <h4 class="card-title">Behind the scenes of Darwin Nunez's Liverpool arrival</h4>
+                </div>
+                </div>
+            </div>   -->
+            <div class="col-lg-4 haha">
+                <div class="card text-left blog">
+                <img class="card-img-top heightt" src="https://pbs.twimg.com/media/FU0TeXmWQAAOQwH.jpg:large" alt="">
+                <div class="card-body buymow">
+                    <p class=" nunezs">DARWIN NÚÑEZ - 27</p>
+                    <h4 class="card-title mt-3">LFC NIKE MEN'S HOME STADIUM JERSEY 22/23</h4>
+                    <div class="buy mt-5 mb-3">
+                        <a href="">BUY NOW<i class="fa-solid fa-angle-right ml-3"></i></a>
+                    </div>
+                    <div class="custom ">
+                        <a href="" class="mt-3">CUSTOMISE<i class="fa-solid fa-angle-right ml-3"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div></header>
+
+<div class="container">
+    <div class="d-flex all mt-5 mb-4">
+        <div >
+            <p class="fixtures">2022-23 FIXTURES</p>
+        </div>
+        <div class="allfix">
+            <a href="">ALL FIXTURES<i class="fa-solid fa-angle-right ml-2"></i></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Friendly</h5>
+                    <p class="card-text">Tue 12 July — 20:00</p>
+                </div>
+                <div class="LwithM card-body">
+                    <div class="liv mb-3">
+                        <img src="https://backend.liverpoolfc.com/sites/default/files/styles/sm/public/2022-04/liverpool-fc-crest.webp?itok=BN0-AdBO" width="30px" alt="">
+                        <span class="ml-2">Liverpool</span>
+                    </div>
+                    <div class="mu mt-3">
+                        <img src="https://backend.liverpoolfc.com/sites/default/files/styles/sm/public/2022-04/manchester-united-crest.webp?itok=6e29Y0lI" width="30px" alt="">
+                        <span class="ml-2">Man Utd</span>
+                    </div>
+                </div>
+                <div class="moredetail card-body morede">
+                    <a href="">MORE DETAILS<i class="fa-solid fa-angle-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Friendly</h5>
+                    <p class="card-text">Tue 12 July — 20:00</p>
+                </div>
+                <div class="LwithM card-body">
+                    <div class="liv mb-3">
+                        <img src="https://backend.liverpoolfc.com/sites/default/files/styles/sm/public/2022-06/rb-leipzig-crest_4.webp?itok=DDLSIUgw" width="30px" alt="">
+                        <span class="ml-2">RB Leipzig</span>
+                    </div>
+                    <div class="mu mt-3">
+                        <img src="https://backend.liverpoolfc.com/sites/default/files/styles/sm/public/2022-04/liverpool-fc-crest.webp?itok=BN0-AdBO" width="30px" alt="">
+                        <span class="ml-2">Liverpool</span>
+                    </div>
+                </div>
+                <div class="moredetail card-body morede">
+                    <a href="">MORE DETAILS<i class="fa-solid fa-angle-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Friendly</h5>
+                    <p class="card-text">Tue 12 July — 20:00</p>
+                </div>
+                <div class="LwithM card-body">
+                    <div class="liv mb-3">
+                        <img src="https://backend.liverpoolfc.com/sites/default/files/styles/sm/public/2022-04/liverpool-fc-crest.webp?itok=BN0-AdBO" width="30px" alt="">
+                        <span class="ml-2">Liverpool</span>
+                    </div>
+                    <div class="mu mt-3">
+                        <img src="https://backend.liverpoolfc.com/sites/default/files/styles/sm/public/2022-05/manchester-city-crest-31052022.webp?itok=QX7rPSpg" width="30px" alt="">
+                        <span class="ml-2">Man City</span>
+                    </div>
+                </div>
+                <div class="moredetail card-body morede">
+                    <a href="">MORE DETAILS<i class="fa-solid fa-angle-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="checkout mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <img src="https://tpc.googlesyndication.com/simgad/1324905051964504493" width="100%" alt="">
+            </div>
+            <div class="col-lg-3">
+                <img src="https://tpc.googlesyndication.com/simgad/15809878189311267781" width="100%" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="d-flex all mt-5 mb-4">
+        <div >
+            <p class="fixtures">VIDEOS</p>
+        </div>
+        <div class="allfix">
+            <a href="">MORE<i class="fa-solid fa-angle-right ml-2"></i></a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let item of video">
+            <div class="card text-left">
+                <div class="video">
+                    <img class="card-img-top" src="{{item.video}}" alt="">
+                </div>
+                <div class="icom">
+                    <i class="fa-solid fa-square-caret-right ml-3"></i>
+                </div>
+              <div class="card-body">
+                <p class="card-text">1 day ago</p>
+                <h4 class="card-title">{{item.content}}</h4>
+              </div>
+            </div>
+        </div>
+        <!-- <div class="col-lg-4">
+            <div class="card text-left">
+                <div class="video">
+                    <img class="card-img-top" src="https://open.http.mp.streamamg.com/p/101/thumbnail/entry_id/0_pyxqxvga/width/600/height/300/type/3?width=1680" alt="">
+                </div>
+                <div class="icom">
+                    <i class="fa-solid fa-square-caret-right ml-3"></i>
+                </div>
+              <div class="card-body">
+                <p class="card-text">16th June 2022</p>
+                <h4 class="card-title">Dear Liverpool: Robbo joins Tony's wellbeing walk</h4>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card text-left">
+                <div class="video">
+                    <img class="card-img-top" src="https://open.http.mp.streamamg.com/p/101/thumbnail/entry_id/0_69ibitae/width/600/height/300/type/3?width=1680" alt="">
+                </div>
+                <div class="icom">
+                    <i class="fa-solid fa-square-caret-right ml-3"></i>
+                </div>
+              <div class="card-body">
+                <p class="card-text">16th June 2022</p>
+                <h4 class="card-title">Darwin Nunez: Media day behind the scenes</h4>
+              </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+<div class="checkout mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="https://tpc.googlesyndication.com/simgad/1383964086740121248" width="100%" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="d-flex all mt-5 mb-4">
+        <div >
+            <p class="fixtures">REDS SEAL DARWIN NUNEZ DEAL</p>
+        </div>
+        <!-- <div class="allfix">
+            <a href="">MORE<i class="fa-solid fa-angle-right ml-2"></i></a>
+        </div> -->
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let item of darwin">
+            <div class="card text-left">
+              <img class="card-img-top" src="{{item.images}}" alt="">
+              <div class="card-body">
+                <p class="card-text">15th June 2022</p>
+                <h4 class="card-title">{{item.content}}</h4>
+              </div>
+            </div>
+        </div>
+        <!-- <div class="col-lg-4"> 
+            <div class="card text-left">
+              <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-06/nunez-shirt-competition-15062022.webp?itok=cv4W3ny4&width=1680" alt="">
+              <div class="card-body">
+                <p class="card-text">15th June 2022</p>
+                <h4 class="card-title">Win a 2022-23 home shirt signed by Darwin Nunez</h4>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card text-left">
+              <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-06/darwin-nunez-signing-gallery-140622.webp?itok=qHRWVy3w&width=1680" alt="">
+              <div class="card-body">
+                <p class="card-text">15th June 2022</p>
+                <h4 class="card-title">Darwin Nunez's LFC signing day in photos</h4>
+              </div>
+            </div>
+        </div>  -->
+    </div>
+</div>
+<div class="checkout mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <img src="https://tpc.googlesyndication.com/simgad/5290152462886404602" width="100%" alt="">
+            </div>
+            <div class="col-lg-3 expe-right">
+                <img src="https://tpc.googlesyndication.com/simgad/3263459557562042719" width="100%" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container attending mt-5">
+    <div class="row">
+        <div class="col-lg-9">
+            <div>
+                <h3>ATTENDING A CONCERT AT ANFIELD IN JUNE?</h3>  <p><span>Here's everything you need to know to get the most out of your experience.</span></p>
+            </div>
+            <div class="concerts">
+                <h6>CONCERTS INFORMATION<i class="fa-solid fa-angle-right ml-2"></i></h6>
+            </div>
+        </div>
+        <div class="col-lg-3 radiuss">
+            <img src="https://backend.liverpoolfc.com/sites/default/files/styles/sm/public/acquiadam/2022-06/anfield-promo-06062022.webp?itok=zG_ONk5L" width="100%" alt="">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="d-flex all mt-5 mb-4">
+        <div >
+            <p class="fixtures">LFC 130 YEARS COLLECTION</p>
+        </div>
+        <div class="allfix">
+            <a href="">SHOP NOW<i class="fa-solid fa-angle-right ml-2"></i></a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let item of product">
+            <div class=" pro ">
+                <div class="bg-light sp_left">
+                    <p>.</p>
+                </div>
+                <div class="card text-left sp_right">
+                    <img class="card-img-top" src="{{item.img}}" width="100%" alt="">
+                </div>
+            </div>
+            <div class="price">
+                <p>{{item.content}} </p>
+                <h3>£ {{item.price}}</h3>
+            </div>
+        </div>
+        <!-- <div class="col-lg-4">
+            <div class=" pro">
+                <div class="bg-light sp_left">
+                    <p>.</p>
+                </div>
+                <div class="card text-left sp_right">
+                    <img class="card-img-top" src="https://store.liverpoolfc.com/media/catalog/product/cache/e40f24c9b2ed5e95810c34ee2663af1c/s/2/s22je02_2o7a3385.jpg?width=1680" width="100%" alt="">
+                </div>
+            </div>
+            <div class="price">
+                <p>LFC Adult 130 Years Bar Scarf </p>
+                <h3>£ 150.00</h3>
+            </div>
+        </div>
+        <div class="col-lg-4 ">
+            <div class=" pro">
+                <div class="bg-light sp_left">
+                    <p>.</p>
+                </div>
+                <div class="card text-left sp_right">
+                    <img class="card-img-top" src="https://store.liverpoolfc.com/media/catalog/product/cache/e40f24c9b2ed5e95810c34ee2663af1c/s/2/s22an01_1.jpg?width=1680" width="100%" alt="">
+                </div>
+            </div>
+            <div class="price">
+                <p>LFC Adult 130 Years Bar Scarf </p>
+                <h3>£ 150.00</h3>
+            </div>
+        </div> -->
+    </div>
+</div>
+<div class="background mt-5">
+    <div class="container">
+        <div class="didyou">
+            <h6 class="mt-3 mb-3">DID YOU KNOW?</h6>
+            <h1>New signing Darwin Nunez is the third Uruguayan to represent Liverpool, following Luis Suarez and Sebastian Coates.</h1>
+        </div>
+    </div>
+    
+</div>
+<div class="container">
+    <div class="d-flex all mt-5 mb-4">
+        <div >
+            <p class="fixtures">AWARD-WINNING MO SALAH</p>
+        </div>
+        <!-- <div class="allfix">
+            <a href="">MORE<i class="fa-solid fa-angle-right ml-2"></i></a>
+        </div> -->
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let item of salah">
+            <div class="card text-left">
+              <img class="card-img-top" src="{{item.img}}" alt="">
+              <div class="card-body">
+                <p class="card-text">15th June 2022</p>
+                <h4 class="card-title">{{item.content}}</h4>
+              </div>
+            </div>
+        </div>
+        <!-- <div class="col-lg-4">
+            <div class="card text-left">
+              <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-06/mohamed-salah-pots-lfc-060522.webp?itok=z_wleob4&width=1680" alt="">
+              <div class="card-body">
+                <p class="card-text">15th June 2022</p>
+                <h4 class="card-title">Mohamed Salah voted Liverpool's Men's Player of the Season</h4>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card text-left">
+              <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-05/mohamed-salah-liverpool-290522.webp?itok=ksFByBXV&width=1680" alt="">
+              <div class="card-body">
+                <p class="card-text">15th June 2022</p>
+                <h4 class="card-title">Mohamed Salah wins PFA Fans' Player of the Year</h4>
+              </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+<div class="checkout mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 haha">
+                <div class="card text-left blog">
+                <img class="card-img-top heightt" src="https://backend.liverpoolfc.com/sites/default/files/styles/xl/public/2022-05/BLANK%20-%2022-23%20MENS%20HOME%20STADIUM_0.webp?itok=Ty9ap6bK?width=1680" alt="">
+                <div class="card-body buymow">
+                    <p class=" nunezs">22/23 LFC HOME KIT</p>
+                    <h4 class="card-title mt-3">LFC NIKE MEN'S HOME STADIUM JERSEY 22/23</h4>
+                    <div class="buy mt-5 mb-3">
+                        <a href="">BUY NOW<i class="fa-solid fa-angle-right ml-3"></i></a>
+                    </div>
+                    <div class="custom ">
+                        <a href="" class="mt-3">CUSTOMISE<i class="fa-solid fa-angle-right ml-3"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-left">
+                  <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-05/lfc-training-kit-2223-180522-9.webp?itok=PUAZKrwk&width=1680" alt="">
+                  <div class="card-body">
+                    <p class="card-text">15th June 2022</p>
+                    <h4 class="card-title">Mohamed Salah wins PFA Fans' Player of the Year</h4>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-left">
+                  <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-05/fa-cup-winners-range-14052022.webp?itok=yWFwHKp1&width=1680" alt="">
+                  <div class="card-body">
+                    <p class="card-text">15th June 2022</p>
+                    <h4 class="card-title">Mohamed Salah wins PFA Fans' Player of the Year</h4>
+                  </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+<div class="container attendings mt-5">
+    <div class="row paad">
+        <!-- <div class="paad"> -->
+            <div class="col-lg-9">
+                <div>
+                    <h2>LATEST VIDEOS</h2><h3> Watch LFCTV GO for exclusive interviews, documentaries and highlights.</h3>  <p><span></span></p>
+                </div>
+                <div class="concerts">
+                    <h6>WATCH NOW<i class="fa-solid fa-angle-right ml-2"></i></h6>
+                </div>
+            </div>
+            <div class="col-lg-3 radiusss">
+                <img src="https://backend.liverpoolfc.com/sites/default/files/styles/sm/public/2021-11/Player%20Circles-Group.webp?itok=11lGiQnW" width="100%" alt="">
+            </div>
+        <!-- </div> -->
+    </div>
+</div>
+<div class="container">
+    <div class="d-flex all mt-5 mb-4">
+        <div >
+            <p class="fixtures">INSIDE 2021-22</p>
+        </div>
+        <!-- <div class="allfix">
+            <a href="">MORE<i class="fa-solid fa-angle-right ml-2"></i></a>
+        </div> -->
+    </div>
+</div>
+<div class="checkout">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card text-left">
+                    <div class="video">
+                        <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-05/inside-liverpool-parade-31052022.webp?itok=ebIgIb4t&width=1680" alt="">
+                    </div>
+                    <div class="icom">
+                        <i class="fa-solid fa-square-caret-right ml-3"></i>
+                    </div>
+                  <div class="card-body">
+                    <p class="card-text">1 day ago</p>
+                    <h4 class="card-title">Top 10 Contenders: LFC's Greatest Goal</h4>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-left">
+                    <div class="video">
+                        <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-05/inside-anfield-wolves-23052022.webp?itok=RtoxN-HL&width=1680" alt="">
+                    </div>
+                    <div class="icom">
+                        <i class="fa-solid fa-square-caret-right ml-3"></i>
+                    </div>
+                  <div class="card-body">
+                    <p class="card-text">16th June 2022</p>
+                    <h4 class="card-title">Dear Liverpool: Robbo joins Tony's wellbeing walk</h4>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-left">
+                    <div class="video">
+                        <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-05/inside-st-marys-liverpool-180522.webp?itok=9Wv_0gSo&width=1680" alt="">
+                    </div>
+                    <div class="icom">
+                        <i class="fa-solid fa-square-caret-right ml-3"></i>
+                    </div>
+                  <div class="card-body">
+                    <p class="card-text">16th June 2022</p>
+                    <h4 class="card-title">Darwin Nunez: Media day behind the scenes</h4>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="d-flex all mt-5 mb-4">
+        <div >
+            <p class="fixtures">NEW: 2022-23 HOME KIT</p>
+        </div>
+        <!-- <div class="allfix">
+            <a href="">MORE<i class="fa-solid fa-angle-right ml-2"></i></a>
+        </div> -->
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class=" pro ">
+                <div class="bg-light sp_left">
+                    <p>.</p>
+                </div>
+                <div class="card text-left sp_right">
+                    <img class="card-img-top" src="https://store.liverpoolfc.com/media/catalog/product/cache/e40f24c9b2ed5e95810c34ee2663af1c/d/j/dj7915r_copy.jpg?width=1680" width="100%" alt="">
+                </div>
+            </div>
+            <div class="price">
+                <p>LFC Adult 130 Years Bar Scarf </p>
+                <h3>£ 150.00</h3>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class=" pro">
+                <div class="bg-light sp_left">
+                    <p>.</p>
+                </div>
+                <div class="card text-left sp_right">
+                    <img class="card-img-top" src="https://store.liverpoolfc.com/media/catalog/product/cache/e40f24c9b2ed5e95810c34ee2663af1c/d/j/dj7647r_1_copy.jpg?width=1680" width="100%" alt="">
+                </div>
+            </div>
+            <div class="price">
+                <p>LFC Adult 130 Years Bar Scarf </p>
+                <h3>£ 150.00</h3>
+            </div>
+        </div>
+        <div class="col-lg-4 ">
+            <div class=" pro">
+                <div class="bg-light sp_left">
+                    <p>.</p>
+                </div>
+                <div class="card text-left sp_right">
+                    <img class="card-img-top" src="https://store.liverpoolfc.com/media/catalog/product/cache/e40f24c9b2ed5e95810c34ee2663af1c/d/j/dj7895l_copy.jpg?width=1680" width="100%" alt="">
+                </div>
+            </div>
+            <div class="price">
+                <p>LFC Adult 130 Years Bar Scarf </p>
+                <h3>£ 150.00</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="background mt-5">
+    <div class="container">
+        <div class="didyou">
+            <h1>"The club has a special place in my heart. I'm just so happy that I've been able to play my part in this beautiful club."</h1>
+        </div>
+        <div class="mt-5 text-center center">
+            <div class="card text-left">
+                <div class="card-body bg-warning ">
+                  <h4 class="card-title">Divock Origi: Liverpool has a special place in my heart</h4>
+                </div>
+                    <img class="card-img-top" src="https://backend.liverpoolfc.com/sites/default/files/styles/md/public/acquiadam/2022-05/Divock-Origi-main.webp?itok=rUMMcelB&width=1680" alt="">
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="https://www.liverpoolfc.com/memorial-1989-desktop.svg" width="100%" alt="">
+        </div>
+        <div class="col-lg-6">
+            <img src="https://www.liverpoolfc.com/memorial-1985-desktop.svg"  width="100%" alt="">
+        </div>
+    </div>
+</div>
+<div>
+    <div class="container mt-5">
+        <div class="row text-center">
+            <div class="col-lg-2 ">
+                <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2022-05/league_title.svg" width="100%" alt="">
+                    <p>19</p>
+            </div>
+            <div class="col-lg-10 cup">
+                <div class="row hahaha">
+                    <div class="col-lg-2">
+                        <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2022-05/european_cup.svg" width="100%" alt="">
+                        <p>6</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2022-05/fa_cup.svg" width="100%" alt="">
+                        <p>8</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2022-05/uefa_cup.svg" width="100%" alt="">
+                        <p>3</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2022-05/league_cup.svg" width="100%" alt="">
+                        <p>9</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2022-05/uefa_super_cup.svg" width="100%" alt="">
+                        <p>4</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2022-05/fifa_club_world_cup.svg" width="100%" alt="">
+                        <p>1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="taitro mt-5">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-3">
+                <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2021-06/2021-22_SCB_White.svg" alt="">
+            </div>
+            <div class="col-lg-3">
+                <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2021-06/2021-22_Nike_White.svg" alt="">
+            </div>
+            <div class="col-lg-3">
+                <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2021-06/2021-22_AXA_White.svg" alt="">
+            </div>
+            <div class="col-lg-3">
+                <img src="https://lfcdxp.prod.acquia-sites.com/sites/default/files/2021-06/2021-22_Expedia_White.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="information ">
+        <div class="menu-footer">
+            <ul>
+                <li><a href="">PRIVACY POLICY</a></li>
+                <li><a href="">TERMS AND CONDITIONS</a></li>
+                <li><a href="">ANTI-SLAVERY</a></li>
+                <li><a href="">COOKIES</a></li>
+                <li><a href="">HELP</a></li>
+                <li><a href="">BROWSER SUPPORT</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-instagram-square"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </div>
+    <div class="container">
+        <div class="end">
+            <p class="text-center mt-5">
+                © COPYRIGHT 2022 THE LIVERPOOL FOOTBALL CLUB AND ATHLETIC GROUNDS LIMITED. ALL RIGHTS RESERVED. MATCH STATISTICS SUPPLIED BY OPTA SPORTS DATA LIMITED. REPRODUCED UNDER LICENCE FROM FOOTBALL DATACO LIMITED. ALL RIGHTS RESERVED.
+            </p>
+        </div>
+    </div>
+    
+</div>

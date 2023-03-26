@@ -1,0 +1,144 @@
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+            <h2 class="text-center" style="font-weight: 700;">REGISTER ADMIN ACCOUNT</h2>
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1">First name *</label>
+                        <input type="text" id="form3Example1" class="form-control" formControlName="firstName"/>
+                        <div *ngIf="f.firstName.invalid && (f.firstName.dirty || f.firstName.touched)" class="text-danger">
+                            <div *ngIf="f.firstName.errors?.['required']">
+                                <small>This is a required field.</small>
+                            </div>
+                            <div *ngIf="f.firstName.errors?.['minlength']">
+                                <small>First Name format errors </small>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example2">Last name *</label>
+                        <input type="text" id="form3Example2" class="form-control" formControlName="lastName"/>
+                        <div *ngIf="f.lastName.invalid && (f.lastName.dirty || f.lastName.touched)" class="text-danger">
+                            <div *ngIf="f.lastName.errors?.['required']">
+                                <small>This is a required field.</small>
+                            </div>
+                            <div *ngIf="f.lastName.errors?.['minlength']">
+                                <small>Last Name format errors </small>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- UserName input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3">UserName *</label>
+                    <input type="text" id="form3Example3" class="form-control" formControlName="userName" />
+                    <div *ngIf="f.userName.invalid && (f.userName.dirty || f.userName.touched)" class="text-danger">
+                        <div *ngIf="f.userName.errors?.['required']">
+                            <small>This is a required field.</small>
+                        </div>
+                        <div *ngIf="f.userName.errors?.['minlength']">
+                            <small>UserName format errors </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3">Email address *</label>
+                    <input type="email" id="form3Example3" class="form-control" formControlName="email"/>
+                    <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="text-danger">
+                        <div *ngIf="f.email.errors?.['required']">
+                            <small>This is a required field.</small>
+                        </div>
+                        <div *ngIf="f.email.errors?.['minlength']">
+                            <small>Email format errors </small>
+                        </div>
+                    </div>
+                </div>
+              
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example4">Password *</label>
+                    <input type="password" id="form3Example4" class="form-control" formControlName="password" />
+                    <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="text-danger">
+                        <div *ngIf="f.password.errors?.['required']">
+                            <small>This is a required field.</small>
+                        </div>
+                        <div *ngIf="f.password.errors?.['minlength']">
+                            <small>Password format errors </small>
+                        </div>
+                    </div>
+                </div>
+              
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                  <label class="form-check-label" for="form2Example33">
+                    Subscribe to our newsletter
+                  </label>
+                </div>
+              
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+              
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <p>or sign up with:</p>
+                  <button type="button" class="btn btn-primary btn-floating mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+              
+                  <button type="button" class="btn btn-primary btn-floating mx-1">
+                    <i class="fab fa-google"></i>
+                  </button>
+              
+                  <button type="button" class="btn btn-primary btn-floating mx-1">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+              
+                  <button type="button" class="btn btn-primary btn-floating mx-1">
+                    <i class="fab fa-github"></i>
+                  </button>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+    <div
+      class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+      <!-- Copyright -->
+      <div class="text-white mb-3 mb-md-0">
+        Copyright © 2020. All rights reserved.
+      </div>
+      <!-- Copyright -->
+  
+      <!-- Right -->
+      <div>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#!" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#!" class="text-white">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </div>
+  </section>

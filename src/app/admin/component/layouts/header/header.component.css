@@ -1,0 +1,41 @@
+.top{
+    color: #ffffff;
+    background: rgb(236, 198, 198);
+}
+.liver{
+    background: red;
+}
+.ip{
+    width: 85%;
+}
+.ip input{
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid red;
+    outline: none;
+    width: 100%;
+    background-color: rgb(236, 198, 198);
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bell{
+    width: 15%;
+    justify-content: space-around;
+}
+.bell i{
+    font-size: 20px;
+    color: red;
+}
+.bell>div{
+    width: auto !important;
+    padding: 0 !important;
+}
+.scrol{
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+}
