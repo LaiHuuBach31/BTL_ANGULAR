@@ -4,7 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { Cart } from '../cart';
 import { ProductService } from './product.service';
 
-const urlApi = 'http://localhost:3000/cart'
+const urlApi = 'https://build-json-server.vercel.app'
 
 @Injectable({
   providedIn: 'root'

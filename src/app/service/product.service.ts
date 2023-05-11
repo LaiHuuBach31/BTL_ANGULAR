@@ -5,7 +5,7 @@ import { Cart } from '../cart';
 import { Category } from '../category';
 import { Product } from '../product';
 
-const urlApi = "http://localhost:3000";
+const urlApi = "https://build-json-server.vercel.app";
 
 @Injectable({
   providedIn: 'root'
