@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const UrlApi = "http://localhost:3000" 
+const UrlApi = "https://build-json-server.vercel.app" 
 
 @Injectable({
   providedIn: 'root'
